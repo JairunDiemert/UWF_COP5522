@@ -1,7 +1,9 @@
 CC=gcc
+CCMPI=mpicc
 CFLAG= -Wall -I. -O0
+CFLAG_OPT= -Wall -I. -O3
 
-TARGETS=montecarlo
+TARGETS=montecarlo montecarlo_opt1
 
 all: $(TARGETS)
 
@@ -10,6 +12,12 @@ montecarlo: montecarlo.o
 
 montecarlo.o: montecarlo.c montecarlo.h
 	$(CC) $(CFLAG) -c $< -lm
+
+montecarlo_opt1: montecarlo_opt1.o
+	$(CCMPI) -o $@ $^ -lm
+
+montecarlo_opt1.o: montecarlo_opt1.c montecarlo.h
+	$(CCMPI) $(CFLAG_OPT) -c $< -lm
 
 clean:
 	rm -f *.o *~ core $(TARGETS)

@@ -1,0 +1,6 @@
+for some reason the "time" command does not format properly when run as part of a bash script
+run unoptimized montecarlo like
+time ./montecarlo <desired number of iterations>
+
+run optimized montecarlo like
+time mpirun -np <desired number of processes> ./montecarlo_opt1 <desired number of iterations>
