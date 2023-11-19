@@ -4,3 +4,9 @@ time ./montecarlo <desired number of iterations>
 
 run optimized montecarlo like
 time mpirun -np <desired number of processes> ./montecarlo_opt1 <desired number of iterations>
+
+In similar fashion to the previous updates. run as follows
+
+time mpirun -np <desired number of processes> ./montecarlo_opt2 <desired number of iterations>
+
+time mpirun -np <desired number of processes> ./montecarlo_opt3 <desired number of iterations>
