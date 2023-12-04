@@ -1,4 +1,5 @@
-for some reason the "time" command does not format properly when run as part of a bash script
+Instructions for running code:
+
 run unoptimized montecarlo like
 time ./montecarlo <desired number of iterations>
 
